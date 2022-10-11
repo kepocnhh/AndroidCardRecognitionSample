@@ -7,10 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,21 +26,40 @@ internal class MainActivity : AppCompatActivity() {
                     .fillMaxSize()
                     .background(Color.Black)
             ) {
-                BasicText(
+                Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(48.dp)
                         .align(Alignment.Center)
-                        .clickable {
-                            finish()
-                            startActivity(Intent(context, GMSActivity::class.java))
-                        },
-                    style = TextStyle(
-                        color = Color.Blue,
-                        textAlign = TextAlign.Center
-                    ),
-                    text = "google"
-                )
+                ) {
+                    BasicText(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(48.dp)
+                            .clickable {
+                                finish()
+                                startActivity(Intent(context, GMSActivity::class.java))
+                            },
+                        style = TextStyle(
+                            color = Color.Blue,
+                            textAlign = TextAlign.Center
+                        ),
+                        text = "google"
+                    )
+                    BasicText(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(48.dp)
+                            .clickable {
+                                finish()
+                                startActivity(Intent(context, PaycardsActivity::class.java))
+                            },
+                        style = TextStyle(
+                            color = Color.Blue,
+                            textAlign = TextAlign.Center
+                        ),
+                        text = "pay.cards"
+                    )
+                }
             }
         }
     }

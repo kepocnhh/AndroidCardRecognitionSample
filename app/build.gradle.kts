@@ -1,6 +1,7 @@
 repositories {
     mavenCentral()
     google()
+    maven("https://pay.cards/maven")
 }
 
 plugins {
@@ -56,9 +57,10 @@ androidComponents.onVariants { variant ->
 
 dependencies {
     implementation("androidx.activity:activity-compose:1.5.1")
-    implementation("androidx.appcompat:appcompat:1.5.0")
+    implementation("androidx.appcompat:appcompat:1.5.1")
     implementation("androidx.compose.foundation:foundation:${Version.Android.compose}")
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
     implementation("com.google.android.gms:play-services-wallet:19.1.0")
+    implementation("cards.pay:paycardsrecognizer:1.1.0")
 }

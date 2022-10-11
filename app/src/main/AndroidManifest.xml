@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="test.android.cardrec">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:name=".App"
         android:theme="@style/App.Theme"
@@ -14,6 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".GMSActivity"
+            android:exported="true"/>
+        <activity android:name=".PaycardsActivity"
             android:exported="true"/>
     </application>
 
