@@ -60,4 +60,5 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:${Version.Android.compose}")
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation("com.google.android.gms:play-services-wallet:19.1.0")
 }
